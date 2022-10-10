@@ -9,9 +9,11 @@
 .Home__content .Home__greetings {
   font-size: 2.5rem;
   white-space: nowrap;
+  overflow: hidden;
 }
 .Home__content .Home__greetings .Home__name {
   font-size: 4rem;
+  width: 30rem;
   font-weight: 900;
 }
 .Home__content .Home__title {
