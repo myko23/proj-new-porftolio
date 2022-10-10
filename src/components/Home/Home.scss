@@ -1,0 +1,49 @@
+@use "./../../styles" as *;
+
+.Home {
+	background-color: $primary;
+	color: white;
+}
+
+.Home__content {
+	padding: 10rem 1rem 2rem 17rem;
+
+	.Home__greetings {
+		font-size: 2.5rem;
+		white-space: nowrap;
+
+		.Home__name {
+			font-size: 4rem;
+			font-weight: 900;
+		}
+	}
+	.Home__title {
+		margin-bottom: 2rem;
+	}
+	.Home__btn-container {
+		@include displayFlex(row);
+		gap: 1.5rem;
+		.Home__btn {
+			font-weight: bold;
+			color: black;
+			background-color: yellow;
+			width: 15rem;
+			text-align: center;
+			font-size: 1.5rem;
+			padding: 0.5rem 0;
+			border-radius: 1.5rem;
+			cursor: pointer;
+
+			&:hover {
+				background-color: white;
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+@media (max-width: $md) {
+	.Home__content {
+		padding: 2rem;
+	}
+}

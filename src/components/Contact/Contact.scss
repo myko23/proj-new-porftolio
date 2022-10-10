@@ -1,0 +1,54 @@
+@use "../../styles" as *;
+
+.Contact {
+	margin-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.Contact__container {
+	overflow: hidden;
+	background-color: white;
+	box-shadow: $boxshadow;
+
+	.Contact__nav {
+		@include displayFlex(row, true);
+		width: 100%;
+		.Contact__nav-details {
+			width: 80%;
+			padding: 2rem 3rem;
+
+			.Contact__nav-header {
+				font-size: 3rem;
+				font-weight: bold;
+			}
+			.Contact__nav-description {
+				font-size: 2rem;
+			}
+		}
+		.Contact__nav-icon {
+			font-size: 8rem;
+			width: 10rem;
+		}
+	}
+}
+
+.Contact__form {
+	@include fitBox();
+	@include displayFlex(column);
+	background-color: rgb(217, 217, 217);
+	gap: 3rem;
+	padding: 4rem;
+	font-size: 3rem;
+
+	.Contact__email {
+		padding: 0.5rem 1rem;
+	}
+	.Contact__submit-btn {
+		background-color: dodgerblue;
+		width: fit-content;
+		cursor: pointer;
+		padding: 0.5rem 3rem;
+		border-radius: 0.5rem;
+		color: white;
+	}
+}

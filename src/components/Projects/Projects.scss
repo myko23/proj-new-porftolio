@@ -1,0 +1,118 @@
+@use "../../styles" as *;
+
+$phonecolor: black;
+
+.Projects {
+	margin-top: 5rem;
+	box-shadow: $boxshadow;
+	padding: 3rem 2rem;
+	background-color: white;
+
+	.Projects__profile-photo {
+		padding: 3rem;
+		.Projects__profile {
+			box-shadow: $boxshadow;
+			@include fitBox();
+			object-fit: cover;
+		}
+	}
+
+	.Projects__list-section {
+		@include displayFlex(row, true);
+	}
+}
+
+.Projects__lists {
+	width: 80%;
+	border: 2px solid $phonecolor;
+	padding: 1rem;
+	border-radius: 8rem;
+	overflow: hidden;
+	background-color: $phonecolor;
+
+	.Projects__display {
+		@include displayFlex(column);
+		align-items: center;
+		@include fitBox();
+		border-radius: 7rem;
+		background-color: white;
+		position: relative;
+		overflow: hidden;
+
+		.Projects__camera {
+			position: absolute;
+			top: -0.5rem;
+			background-color: $phonecolor;
+			border-radius: 7rem;
+			height: 3rem;
+			width: 30%;
+		}
+		.Projects__chart {
+			@include fitBox();
+			@include displayFlex(column);
+
+			align-items: center;
+			overflow: hidden;
+			.Projects__display-title {
+				margin-top: 4rem;
+				font-size: 3rem;
+				text-transform: uppercase;
+				font-weight: bold;
+				position: sticky;
+				top: 0;
+			}
+			.Projects__display-list {
+				padding: 0 5rem;
+				height: 60rem;
+				margin-bottom: 3rem;
+				overflow: auto;
+				font-size: 3rem;
+				@include hideScroll();
+				width: 100%;
+			}
+		}
+
+		.Projects__display-nav {
+			position: relative;
+			@include displayFlex(row, true);
+			font-size: 7rem;
+			height: 10rem;
+
+			width: 90%;
+			margin-bottom: 1rem;
+
+			.Projects__display-nav-overlay {
+				@include fitBox();
+				position: absolute;
+				background-color: black;
+
+				border-radius: 3rem;
+			}
+			.Projects__display-icon {
+				z-index: 1;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.ProjectsCard {
+	justify-content: flex-end;
+	cursor: pointer;
+	font-size: 3rem;
+
+	&::before {
+		content: ">";
+		margin-right: 2rem;
+	}
+
+	&:hover {
+		color: blue;
+	}
+}
+
+@media (min-width: $lg) {
+	.Projects__lists {
+		width: 100%;
+	}
+}

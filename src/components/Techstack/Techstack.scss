@@ -1,0 +1,111 @@
+@use "../../styles" as *;
+
+.Techstack {
+	@include displayFlex(column);
+	align-items: center;
+	margin-top: 3rem;
+
+	.TechStack__description {
+		@include displayFlex(row, true);
+		width: 100%;
+		padding: 0 2rem;
+		margin-bottom: 2rem;
+
+		.TechStack__desc-box {
+			@include displayFlex(row, true);
+			box-shadow: $boxshadow;
+			background-color: white;
+
+			.TechStack__desc-title {
+				@include displayFlex(row, true);
+				height: 12rem;
+				font-size: 3rem;
+				text-transform: uppercase;
+				font-weight: 1000;
+				padding: 1rem;
+				border-right: 3px solid black;
+			}
+			.TechStack__desc-description {
+				@include displayFlex(row, true);
+				height: 20rem;
+				padding: 3rem;
+				font-size: 1.5rem;
+				overflow: auto;
+			}
+		}
+	}
+
+	.Techstack__row {
+		width: 100%;
+	}
+	.Techstack__btn {
+		margin-top: 3rem;
+		@include displayFlex(row, true);
+		padding: 1rem 2rem;
+		white-space: nowrap;
+		cursor: pointer;
+		background-color: dodgerblue;
+		box-shadow: $boxshadow;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2.5rem;
+		border-radius: 1rem;
+
+		&:hover {
+			color: dodgerblue;
+			background-color: white;
+			border: 1px solid dodgerblue;
+		}
+	}
+}
+
+.Techstack__items--selected {
+	.TechstackCard {
+		background-color: dodgerblue;
+	}
+}
+
+.TechstackCard {
+	@include displayFlex(column);
+	box-shadow: $boxshadow;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 0.8rem;
+	gap: 2rem;
+	padding: 1rem 2rem;
+	cursor: pointer;
+
+	.TechstackCard__icon {
+		@include squareBox(6rem, true);
+		background-color: white;
+		box-shadow: $boxshadow;
+	}
+
+	.TechstackCard__tech {
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background-color: lightcoral !important;
+	}
+}
+
+@media (max-width: $lg) {
+	.Techstack {
+		.TechStack__description {
+			.TechStack__desc-box {
+				.TechStack__desc-title {
+					border: none;
+					height: 5rem;
+					padding: 1rem;
+				}
+				.TechStack__desc-description {
+					height: fit-content;
+					padding: 1rem 3rem 3rem 3rem;
+				}
+			}
+		}
+	}
+}

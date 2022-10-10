@@ -1,0 +1,29 @@
+@mixin displayFlex($direction: row, $center: false) {
+	display: flex;
+	flex-direction: $direction;
+	@if ($center) {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@mixin squareBox($size, $circle: false) {
+	height: $size;
+	width: $size;
+	@if ($circle) {
+		border-radius: 50%;
+	}
+}
+
+@mixin fitBox() {
+	height: 100%;
+	width: 100%;
+}
+
+@mixin hideScroll() {
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+	&::-webkit-scrollbar {
+		display: none; /* Safari and Chrome */
+	}
+}

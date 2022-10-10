@@ -1,0 +1,150 @@
+@use "../../styles" as *;
+
+.Sidebar {
+	background-color: $primary;
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	color: white;
+
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+.Sidebar__mcontent {
+	@include displayFlex(column);
+	justify-content: center;
+	align-items: stretch;
+
+	padding: 0;
+
+	.Sidebar__mnav {
+		@include displayFlex();
+		padding: 1rem 2rem;
+		border-bottom: 1px solid white;
+
+		.Sidebar__mnav-button {
+			font-size: 3rem;
+			cursor: pointer;
+		}
+	}
+
+	.Sidebar__mlist {
+		@include displayFlex(column);
+		gap: 1rem;
+		height: 0;
+		overflow: hidden;
+		transition: all 0.2s ease-in-out;
+
+		.SidebarCard {
+			font-size: 2rem;
+			padding: 0.8rem 2rem;
+		}
+	}
+
+	.Sidebar__mlist--expand {
+		padding-bottom: 2rem;
+		height: 34.6rem;
+	}
+}
+
+.Sidebar__content {
+	position: absolute;
+	left: 0;
+	background-color: $primary;
+	height: 0;
+	width: 6rem;
+	overflow: hidden;
+
+	.Sidebar___expand {
+		text-align: right;
+		width: 100%;
+		cursor: pointer;
+		margin-bottom: 3rem;
+
+		.Sidebar__expand-btn {
+			border-radius: 2px 0 0 2px;
+			font-size: 2rem;
+			padding: 0.8rem 1rem;
+			color: black;
+			background-color: yellow;
+		}
+	}
+
+	.Sidebar__user-container {
+		@include displayFlex(column, true);
+		gap: 1rem;
+		height: 20rem;
+		margin-bottom: 2rem;
+
+		.Sidebar__prof-pic {
+			@include squareBox(15rem, true);
+			object-fit: cover;
+			border: 3px solid yellow;
+		}
+		.Sidebar__user {
+			font-size: 1.8rem;
+			font-weight: 850;
+		}
+	}
+
+	.SidebarCard {
+		font-size: 5rem;
+		gap: 1rem;
+		padding: 1rem;
+
+		cursor: pointer;
+
+		.SidebarCard__nav-item {
+			font-size: 2rem;
+		}
+
+		&:hover {
+			background-color: lighten($primary, 10%);
+		}
+	}
+}
+
+.Sidebar__content--expand {
+	width: 20rem;
+
+	.Sidebar___expand {
+		margin-bottom: 0;
+	}
+
+	.SidebarCard {
+		font-size: 2rem;
+		padding: 0.5rem 2rem;
+	}
+}
+
+.SidebarCard {
+	@include displayFlex(row);
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+
+	.SidebarCard__nav-item {
+		font-size: 2rem;
+	}
+
+	&:hover {
+		background-color: lighten($primary, 10%);
+	}
+}
+
+@media (min-width: $md) {
+	.Sidebar {
+		position: relative;
+		.Sidebar__mcontent {
+			height: 0;
+			overflow: hidden;
+		}
+		.Sidebar__content {
+			position: fixed;
+			height: 100vh;
+		}
+	}
+}

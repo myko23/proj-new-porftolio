@@ -1,0 +1,114 @@
+.Techstack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+.Techstack .TechStack__description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.Techstack .TechStack__description .TechStack__desc-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+}
+.Techstack .TechStack__description .TechStack__desc-box .TechStack__desc-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 12rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 1000;
+  padding: 1rem;
+  border-right: 3px solid black;
+}
+.Techstack .TechStack__description .TechStack__desc-box .TechStack__desc-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  padding: 3rem;
+  font-size: 1.5rem;
+  overflow: auto;
+}
+.Techstack .Techstack__row {
+  width: 100%;
+}
+.Techstack .Techstack__btn {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: dodgerblue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border-radius: 1rem;
+}
+.Techstack .Techstack__btn:hover {
+  color: dodgerblue;
+  background-color: white;
+  border: 1px solid dodgerblue;
+}
+
+.Techstack__items--selected .TechstackCard {
+  background-color: dodgerblue;
+}
+
+.TechstackCard {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0.8rem;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.TechstackCard .TechstackCard__icon {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.TechstackCard .TechstackCard__tech {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.TechstackCard:hover {
+  background-color: lightcoral !important;
+}
+
+@media (max-width: 992px) {
+  .Techstack .TechStack__description .TechStack__desc-box .TechStack__desc-title {
+    border: none;
+    height: 5rem;
+    padding: 1rem;
+  }
+  .Techstack .TechStack__description .TechStack__desc-box .TechStack__desc-description {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 1rem 3rem 3rem 3rem;
+  }
+}/*# sourceMappingURL=Techstack.css.map */

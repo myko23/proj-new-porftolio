@@ -1,0 +1,51 @@
+.About {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 3rem;
+  background-color: white;
+}
+
+.About__row {
+  padding: 2rem;
+}
+.About__row .About__col--picture {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.About__row .About__col--picture .About__picture {
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid black;
+}
+.About__row .About__col--description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 5rem;
+}
+.About__row .About__col--description .About__description-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+}
+.About__row .About__col--description .About__description {
+  font-size: 2rem;
+}
+
+@media (min-width: 992px) {
+  .About__row .About__col--picture .About__picture {
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50%;
+  }
+  .About__row .About__col--description {
+    padding: 3rem 2rem;
+  }
+}/*# sourceMappingURL=About.css.map */

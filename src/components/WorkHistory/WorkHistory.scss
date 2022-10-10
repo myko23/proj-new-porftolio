@@ -1,0 +1,37 @@
+@use "../../styles" as *;
+
+.WorkHistory {
+	margin-top: 5rem;
+}
+
+.WorkHistoryCard {
+	.WorkHistoryCard__container {
+		cursor: pointer;
+		padding: 2.5rem 1rem;
+		.WorkHistoryCard__institution {
+			font-size: 3rem;
+			font-weight: Bold;
+			line-height: 3rem;
+			text-transform: uppercase;
+		}
+		.WorkHistoryCard__position {
+			font-size: 2rem;
+			line-height: 2rem;
+		}
+		.WorkHistoryCard__location {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+		.WorkHistoryCard__description {
+			font-size: 1.5rem;
+			margin-top: 2rem;
+			line-height: 1.8rem;
+			height: 0;
+			overflow: hidden;
+		}
+
+		&:hover .WorkHistoryCard__description {
+			height: fit-content;
+		}
+	}
+}

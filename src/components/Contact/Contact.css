@@ -1,0 +1,56 @@
+.Contact {
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.Contact__container {
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.Contact__container .Contact__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.Contact__container .Contact__nav .Contact__nav-details {
+  width: 80%;
+  padding: 2rem 3rem;
+}
+.Contact__container .Contact__nav .Contact__nav-details .Contact__nav-header {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.Contact__container .Contact__nav .Contact__nav-details .Contact__nav-description {
+  font-size: 2rem;
+}
+.Contact__container .Contact__nav .Contact__nav-icon {
+  font-size: 8rem;
+  width: 10rem;
+}
+
+.Contact__form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(217, 217, 217);
+  gap: 3rem;
+  padding: 4rem;
+  font-size: 3rem;
+}
+.Contact__form .Contact__email {
+  padding: 0.5rem 1rem;
+}
+.Contact__form .Contact__submit-btn {
+  background-color: dodgerblue;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  border-radius: 0.5rem;
+  color: white;
+}/*# sourceMappingURL=Contact.css.map */

@@ -1,0 +1,140 @@
+.Sidebar {
+  background-color: rgb(29, 29, 29);
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  color: white;
+}
+.Sidebar a {
+  color: white;
+  text-decoration: none;
+}
+
+.Sidebar__mcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+}
+.Sidebar__mcontent .Sidebar__mnav {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid white;
+}
+.Sidebar__mcontent .Sidebar__mnav .Sidebar__mnav-button {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.Sidebar__mcontent .Sidebar__mlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.Sidebar__mcontent .Sidebar__mlist .SidebarCard {
+  font-size: 2rem;
+  padding: 0.8rem 2rem;
+}
+.Sidebar__mcontent .Sidebar__mlist--expand {
+  padding-bottom: 2rem;
+  height: 34.6rem;
+}
+
+.Sidebar__content {
+  position: absolute;
+  left: 0;
+  background-color: rgb(29, 29, 29);
+  height: 0;
+  width: 6rem;
+  overflow: hidden;
+}
+.Sidebar__content .Sidebar___expand {
+  text-align: right;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
+.Sidebar__content .Sidebar___expand .Sidebar__expand-btn {
+  border-radius: 2px 0 0 2px;
+  font-size: 2rem;
+  padding: 0.8rem 1rem;
+  color: black;
+  background-color: yellow;
+}
+.Sidebar__content .Sidebar__user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+.Sidebar__content .Sidebar__user-container .Sidebar__prof-pic {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid yellow;
+}
+.Sidebar__content .Sidebar__user-container .Sidebar__user {
+  font-size: 1.8rem;
+  font-weight: 850;
+}
+.Sidebar__content .SidebarCard {
+  font-size: 5rem;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.Sidebar__content .SidebarCard .SidebarCard__nav-item {
+  font-size: 2rem;
+}
+.Sidebar__content .SidebarCard:hover {
+  background-color: #373737;
+}
+
+.Sidebar__content--expand {
+  width: 20rem;
+}
+.Sidebar__content--expand .Sidebar___expand {
+  margin-bottom: 0;
+}
+.Sidebar__content--expand .SidebarCard {
+  font-size: 2rem;
+  padding: 0.5rem 2rem;
+}
+
+.SidebarCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+.SidebarCard .SidebarCard__nav-item {
+  font-size: 2rem;
+}
+.SidebarCard:hover {
+  background-color: #373737;
+}
+
+@media (min-width: 768px) {
+  .Sidebar {
+    position: relative;
+  }
+  .Sidebar .Sidebar__mcontent {
+    height: 0;
+    overflow: hidden;
+  }
+  .Sidebar .Sidebar__content {
+    position: fixed;
+    height: 100vh;
+  }
+}/*# sourceMappingURL=Sidebar.css.map */
