@@ -13,6 +13,10 @@
 	}
 }
 
+.SidebarCard--active {
+	border-left: 1rem solid yellow;
+}
+
 .Sidebar__mcontent {
 	@include displayFlex(column);
 	justify-content: center;

@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+.SidebarCard--active {
+  border-left: 1rem solid yellow;
+}
+
 .Sidebar__mcontent {
   display: flex;
   flex-direction: column;

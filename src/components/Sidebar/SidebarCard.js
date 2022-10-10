@@ -8,7 +8,7 @@ const SidebarCard = ({ icon, title, expand, target }) => {
 			to={target || "Home"}
 			spy={true}
 			hashSpy={true}
-			offset={-100}
+			offset={-200}
 			className="SidebarCard"
 		>
 			{icon}
